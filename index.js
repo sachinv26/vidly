@@ -20,7 +20,7 @@ app.get('/api/genres', (req, res) => {
   res.send(genres);
 });
 
-// Create a new genre
+// Create a new genre for users
 app.post('/api/genres', (req, res) => {
   const { error } = validateGenre(req.body);
   if (error) return res.status(400).send(error.details[0].message);
